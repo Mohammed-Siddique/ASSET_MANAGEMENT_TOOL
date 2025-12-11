@@ -1,0 +1,24 @@
+import express from "express";
+import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
+dotenv.config();
+import User from "./config/models/user.js";
+import connectDB from "./config/db.js";
+
+const userRegister = async () => {
+    connectDB();
+    try {
+        const hashPassword = await bcrypt.hash('admin', 10);
+        const newUser = new User({
+            name : 'Admin',
+            email : 'admin@gmail.com',
+            password : hashPassword,
+            role : 'admin'
+       })
+       await newUser.save()       
+    } catch (error) {
+        console.log(error); 
+    }
+}
+
+userRegister();

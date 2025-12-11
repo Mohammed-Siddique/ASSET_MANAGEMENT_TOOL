@@ -1,7 +1,8 @@
 import express from 'express'
-const port = process.env.PORt ||8000;
+const port = process.env.PORT ||8000;
 import path from 'path';
 import dotenv from 'dotenv';
+dotenv.config();
 import mongoose from 'mongoose';
 import connectDB from './config/db.js';
 connectDB();
