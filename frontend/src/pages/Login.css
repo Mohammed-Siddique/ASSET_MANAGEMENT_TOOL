@@ -8,7 +8,8 @@
     background: url('../assets/login_background.jpg');
     background-position: center;
     background-size: cover;
-    color: white;
+    color: black;
+    /* color: white; */
     font-weight: bold;
     height: 100vh;
     display: flex;
@@ -22,7 +23,7 @@
     height: 50%;
     width: 25%;
     border-radius: 12px;
-    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 6px 0px rgba(64, 64, 64, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +65,8 @@
 
 .login-container form .check-box-frgtpw .frgtpw a{
     text-decoration: none;
-    color: white;
+    color: black;
+    /* color: white; */
 }
 
 .login-container form button{
